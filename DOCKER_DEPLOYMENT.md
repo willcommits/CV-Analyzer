@@ -59,6 +59,20 @@ curl http://localhost:5161/api/analyze-cv
 
 ## Deploying to Render
 
+### Method 1: Using Render Blueprint (Easiest)
+
+This repository includes a `render.yaml` file for one-click deployment:
+
+1. Fork or push this repository to your GitHub account
+2. Go to [Render Dashboard](https://dashboard.render.com/)
+3. Click "New +" and select "Blueprint"
+4. Connect your GitHub repository
+5. Render will automatically detect the `render.yaml` file
+6. Set the `OpenAI__ApiKey` environment variable when prompted
+7. Click "Apply" to deploy
+
+### Method 2: Manual Web Service Creation
+
 ### Step 1: Push your code to GitHub
 
 Ensure your code is pushed to a GitHub repository with the Dockerfile.
@@ -114,7 +128,21 @@ Update the CORS policy in `Program.cs` if you need to allow additional origins.
 
 ## Health Checks
 
-The API doesn't have a dedicated health check endpoint, but you can use the POST endpoint `/api/analyze-cv` to verify the service is running. For production, consider adding a simple GET endpoint like `/health` that returns a 200 status.
+The API includes a health check endpoint at `/health` that returns a JSON response:
+
+```json
+{
+  "status": "healthy",
+  "timestamp": "2024-10-22T19:00:00.000Z"
+}
+```
+
+This endpoint is useful for:
+- Monitoring service availability
+- Configuring health checks in deployment platforms
+- Load balancer health checks
+
+For more comprehensive health checks, you can also use the POST endpoint `/api/analyze-cv` to verify the service is running, but note that it requires multipart form data.
 
 ## Troubleshooting
 

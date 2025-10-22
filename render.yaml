@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: cv-analyzer-backend
+    runtime: docker
+    region: oregon
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: OpenAI__ApiKey
+        sync: false
+    healthCheckPath: /health
