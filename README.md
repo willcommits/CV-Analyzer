@@ -138,6 +138,24 @@ This application was built with a focus on:
 ## Production Deployment
 
 ### Backend
+
+#### Using Docker (Recommended for Render)
+The backend is fully containerized and ready for deployment. See [DOCKER_DEPLOYMENT.md](DOCKER_DEPLOYMENT.md) for detailed instructions.
+
+Quick start with Docker:
+```bash
+cd backend
+docker build -t cv-analyzer-backend .
+docker run -p 5161:5161 -e OpenAI__ApiKey="your-key" cv-analyzer-backend
+```
+
+Or using docker-compose:
+```bash
+# Create .env file with your OpenAI API key
+docker-compose up -d
+```
+
+#### Traditional Deployment
 - Deploy to Azure App Service, AWS, or similar cloud platform
 - Configure environment variables for OpenAI API key
 - Set up HTTPS certificates

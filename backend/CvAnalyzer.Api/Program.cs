@@ -53,6 +53,11 @@ if (app.Environment.IsDevelopment())
 }
 app.UseCors();
 
+// Health check endpoint
+app.MapGet("/health", () => Results.Ok(new { status = "healthy", timestamp = DateTime.UtcNow }))
+    .WithName("HealthCheck")
+    .WithOpenApi();
+
 // CV Analysis endpoint
 app.MapPost("/api/analyze-cv", async (
     HttpRequest request,
