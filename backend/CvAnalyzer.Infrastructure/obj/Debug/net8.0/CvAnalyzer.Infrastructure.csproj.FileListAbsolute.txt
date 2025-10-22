@@ -1,0 +1,16 @@
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/bin/Debug/net8.0/CvAnalyzer.Infrastructure.deps.json
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/bin/Debug/net8.0/CvAnalyzer.Infrastructure.dll
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/bin/Debug/net8.0/CvAnalyzer.Infrastructure.pdb
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/bin/Debug/net8.0/CvAnalyzer.Core.dll
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/bin/Debug/net8.0/CvAnalyzer.Core.pdb
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/CvAnalyzer.Infrastructure.csproj.AssemblyReference.cache
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/CvAnalyzer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/CvAnalyzer.Infrastructure.AssemblyInfoInputs.cache
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/CvAnalyzer.Infrastructure.AssemblyInfo.cs
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/CvAnalyzer.Infrastructure.csproj.CoreCompileInputs.cache
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/CvAnalyzer.Infrastructure.sourcelink.json
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/CvAnalyz.0522F839.Up2Date
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/CvAnalyzer.Infrastructure.dll
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/refint/CvAnalyzer.Infrastructure.dll
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/CvAnalyzer.Infrastructure.pdb
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Infrastructure/obj/Debug/net8.0/ref/CvAnalyzer.Infrastructure.dll

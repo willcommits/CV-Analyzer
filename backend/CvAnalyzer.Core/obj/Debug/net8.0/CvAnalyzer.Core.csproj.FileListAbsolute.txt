@@ -1,0 +1,12 @@
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/bin/Debug/net8.0/CvAnalyzer.Core.deps.json
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/bin/Debug/net8.0/CvAnalyzer.Core.dll
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/bin/Debug/net8.0/CvAnalyzer.Core.pdb
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/obj/Debug/net8.0/CvAnalyzer.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/obj/Debug/net8.0/CvAnalyzer.Core.AssemblyInfoInputs.cache
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/obj/Debug/net8.0/CvAnalyzer.Core.AssemblyInfo.cs
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/obj/Debug/net8.0/CvAnalyzer.Core.csproj.CoreCompileInputs.cache
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/obj/Debug/net8.0/CvAnalyzer.Core.sourcelink.json
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/obj/Debug/net8.0/CvAnalyzer.Core.dll
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/obj/Debug/net8.0/refint/CvAnalyzer.Core.dll
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/obj/Debug/net8.0/CvAnalyzer.Core.pdb
+/home/runner/work/CV-Analyzer/CV-Analyzer/backend/CvAnalyzer.Core/obj/Debug/net8.0/ref/CvAnalyzer.Core.dll

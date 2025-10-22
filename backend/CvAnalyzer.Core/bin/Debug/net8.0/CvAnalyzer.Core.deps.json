@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CvAnalyzer.Core/1.0.0": {
+        "runtime": {
+          "CvAnalyzer.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CvAnalyzer.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
