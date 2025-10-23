@@ -98,14 +98,38 @@ const API_URL = 'https://your-app-url.onrender.com';
 
 ### Update CORS (if needed)
 
-If deploying the frontend to a different domain, update CORS in `Program.cs`:
+The backend is pre-configured to allow requests from:
+- Local development servers (localhost:3000, 5173, 5174)
+- Production frontend at `https://ornate-beijinho-ecf718.netlify.app`
+
+If you deploy your frontend to a different domain, you have two options:
+
+**Option 1: Using Environment Variable (Recommended)**
+
+Add the `CORS_ALLOWED_ORIGINS` environment variable in Render:
+- Go to your service in Render Dashboard
+- Navigate to "Environment" section
+- Click "Add Environment Variable"
+- Key: `CORS_ALLOWED_ORIGINS`
+- Value: Comma-separated list of your frontend URLs (e.g., `https://my-app.netlify.app,https://another-app.vercel.app`)
+- Click "Save Changes"
+
+**Option 2: Update Code**
+
+Modify `backend/CvAnalyzer.Api/Program.cs` and add your domain to the `allowedOrigins` list:
 
 ```csharp
-policy.WithOrigins(
-    "https://your-frontend-domain.com",
-    "https://*.onrender.com"
-)
+var allowedOrigins = new List<string>
+{
+    "http://localhost:5173", 
+    "http://localhost:5174", 
+    "http://localhost:3000",
+    "https://ornate-beijinho-ecf718.netlify.app",
+    "https://your-frontend-domain.com" // Add your domain here
+};
 ```
+
+Then commit and push the changes.
 
 ## Troubleshooting
 
