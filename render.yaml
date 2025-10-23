@@ -9,6 +9,11 @@ services:
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
+      # REQUIRED: OpenAI API Key
+      # You MUST set this environment variable for the application to work.
+      # Variable name: OpenAI__ApiKey (note the double underscores)
+      # Get your API key from: https://platform.openai.com/api-keys
+      # Set this in the Render dashboard under "Environment" tab
       - key: OpenAI__ApiKey
         sync: false
     healthCheckPath: /health

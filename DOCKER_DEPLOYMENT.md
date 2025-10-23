@@ -5,7 +5,8 @@ This guide explains how to build and deploy the CV Analyzer backend API using Do
 ## Prerequisites
 
 - Docker installed on your system
-- OpenAI API key
+- OpenAI API key (get one at https://platform.openai.com/api-keys)
+- **Note**: The application will NOT start without a valid OpenAI API key
 
 ## Building the Docker Image
 
@@ -91,11 +92,16 @@ Ensure your code is pushed to a GitHub repository with the Dockerfile.
    - **Dockerfile Path**: Dockerfile (relative to backend directory)
    - **Docker Build Context Directory**: backend
 
-### Step 3: Configure Environment Variables
+### Step 3: Configure Environment Variables (REQUIRED)
 
 Add the following environment variable in Render:
-- **Key**: `OpenAI__ApiKey`
-- **Value**: Your OpenAI API key
+- **Key**: `OpenAI__ApiKey` (exactly as shown, with **double underscores**)
+- **Value**: Your OpenAI API key from https://platform.openai.com/api-keys
+
+**Important:** 
+- The application will fail to start if this environment variable is not set
+- Make sure to use double underscores (`__`) not single underscore (`_`)
+- Never commit your API key to source control
 
 ### Step 4: Configure Advanced Settings
 
@@ -110,11 +116,11 @@ Click "Create Web Service" and Render will automatically build and deploy your a
 
 The following environment variables can be configured:
 
-| Variable | Description | Required | Default |
-|----------|-------------|----------|---------|
-| `OpenAI__ApiKey` | OpenAI API key for GPT integration | Yes | - |
-| `ASPNETCORE_ENVIRONMENT` | Application environment (Development/Production) | No | Production |
-| `PORT` | Port number (automatically set by Render) | No | 5161 |
+| Variable | Description | Required | Default | Notes |
+|----------|-------------|----------|---------|-------|
+| `OpenAI__ApiKey` | OpenAI API key for GPT integration | **YES** | - | Use double underscores. Application will not start without this. Get from https://platform.openai.com/api-keys |
+| `ASPNETCORE_ENVIRONMENT` | Application environment (Development/Production) | No | Production | - |
+| `PORT` | Port number (automatically set by Render) | No | 5161 | - |
 
 ## CORS Configuration
 
