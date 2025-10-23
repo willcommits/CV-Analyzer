@@ -6,7 +6,23 @@ This guide will help you deploy the CV Analyzer backend API to Render in just a 
 
 1. A GitHub account with this repository
 2. A Render account (free tier available at https://render.com)
-3. An OpenAI API key
+3. An OpenAI API key (get one at https://platform.openai.com/api-keys)
+
+## ⚠️ REQUIRED: Environment Variable Configuration
+
+**YES, you MUST set the OpenAI API key as an environment variable on Render.**
+
+The application **requires** the following environment variable to function:
+
+| Variable Name | Value | Required |
+|---------------|-------|----------|
+| `OpenAI__ApiKey` | Your OpenAI API key | **YES** |
+
+**Important Notes:**
+- The variable name uses **double underscores** (`__`): `OpenAI__ApiKey`
+- Without this variable, the application will fail to start with an error
+- You can set this during deployment or add it later in the Render dashboard
+- Never commit your API key to source control
 
 ## Deployment Steps
 
@@ -22,7 +38,9 @@ This guide will help you deploy the CV Analyzer backend API to Render in just a 
    - Click "New +" → "Blueprint"
    - Select your repository
    - Render will detect the `render.yaml` file
-   - Add your `OpenAI__ApiKey` as an environment variable
+   - **IMPORTANT**: Click on "Environment" tab and add the required variable:
+     - Key: `OpenAI__ApiKey` (note the double underscores)
+     - Value: Your OpenAI API key from https://platform.openai.com/api-keys
    - Click "Apply"
 
 3. **Wait for Deployment**
@@ -50,9 +68,12 @@ This guide will help you deploy the CV Analyzer backend API to Render in just a 
    - **Runtime**: Docker
    - **Dockerfile Path**: Dockerfile
 
-3. **Add Environment Variable**
-   - Key: `OpenAI__ApiKey`
-   - Value: Your OpenAI API key
+3. **Add Environment Variable** (REQUIRED)
+   - Go to "Environment" section
+   - Click "Add Environment Variable"
+   - Key: `OpenAI__ApiKey` (exactly as shown, with double underscores)
+   - Value: Your OpenAI API key (paste from https://platform.openai.com/api-keys)
+   - **Without this, your application will not start!**
 
 4. **Deploy**
    - Click "Create Web Service"
@@ -94,8 +115,10 @@ policy.WithOrigins(
 - Verify Dockerfile path is correct
 
 ### Container Won't Start
-- Check that `OpenAI__ApiKey` is set
-- Review application logs
+- **Most common issue**: Check that `OpenAI__ApiKey` environment variable is set correctly
+- Verify the variable name uses double underscores: `OpenAI__ApiKey` (not single underscore)
+- Ensure your OpenAI API key is valid and active
+- Review application logs for the specific error message
 - Verify health check endpoint returns 200
 
 ### API Errors
