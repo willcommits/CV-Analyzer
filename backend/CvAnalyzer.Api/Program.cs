@@ -18,11 +18,22 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
-        policy.WithOrigins(
-                "http://localhost:5173", 
-                "http://localhost:5174", 
-                "http://localhost:3000",
-                "https://*.onrender.com") // React dev servers and production
+        var allowedOrigins = new List<string>
+        {
+            "http://localhost:5173", 
+            "http://localhost:5174", 
+            "http://localhost:3000",
+            "https://ornate-beijinho-ecf718.netlify.app" // Production frontend
+        };
+
+        // Allow environment-specified origins for flexibility
+        var additionalOrigins = Environment.GetEnvironmentVariable("CORS_ALLOWED_ORIGINS");
+        if (!string.IsNullOrWhiteSpace(additionalOrigins))
+        {
+            allowedOrigins.AddRange(additionalOrigins.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries));
+        }
+
+        policy.WithOrigins(allowedOrigins.ToArray())
               .AllowAnyMethod()
               .AllowAnyHeader()
               .AllowCredentials();
