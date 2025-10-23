@@ -52,18 +52,34 @@ The built files will be in the `dist/` folder and can be deployed to any static 
 
 ## Environment Variables
 
-For production deployment, set the OpenAI API key as an environment variable instead of in appsettings.json:
+⚠️ **IMPORTANT**: Never commit API keys to the repository. See [SECURITY_NOTICE.md](SECURITY_NOTICE.md) for details.
+
+### Required Configuration
+
+The OpenAI API key **must** be set as an environment variable:
 
 ```bash
 export OpenAI__ApiKey="your-openai-api-key"
 ```
 
+**OR** create a local configuration file (this file is in .gitignore and won't be committed):
+
+```bash
+cd backend/CvAnalyzer.Api
+cp appsettings.Development.json.example appsettings.Development.json
+# Then edit the file and add your API key
+```
+
+Get your API key from: https://platform.openai.com/api-keys
+
 ## Security Notes
 
-- The OpenAI API key is currently in `appsettings.Development.json` for development
-- For production, move this to environment variables or Azure Key Vault
+- **API Key Protection**: Never commit API keys - always use environment variables or secure configuration stores
+- The OpenAI API key must be set as an environment variable (see above)
+- For production, use Azure Key Vault, AWS Secrets Manager, or similar secure storage
 - The application includes CORS configuration for localhost development
 - File uploads are validated for type and size (PDF only, max 5MB)
+- See [SECURITY_NOTICE.md](SECURITY_NOTICE.md) for security best practices
 
 ## Troubleshooting
 
