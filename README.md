@@ -51,12 +51,23 @@ cv-analyzer/
 
 ### Backend Setup
 
+**⚠️ IMPORTANT**: Never commit API keys to the repository. See [SECURITY_NOTICE.md](SECURITY_NOTICE.md) for details.
+
 1. Navigate to the backend directory:
    ```bash
    cd backend
    ```
 
-2. Configure your OpenAI API key in `CvAnalyzer.Api/appsettings.Development.json`
+2. Configure your OpenAI API key using **environment variables** (recommended):
+   ```bash
+   export OpenAI__ApiKey="your-api-key-here"
+   ```
+   
+   **OR** create a local configuration file (this file is in .gitignore and won't be committed):
+   ```bash
+   cp CvAnalyzer.Api/appsettings.Development.json.example CvAnalyzer.Api/appsettings.Development.json
+   # Then edit the file and add your API key
+   ```
 
 3. Restore dependencies and build:
    ```bash
@@ -123,6 +134,7 @@ Analyzes a CV PDF and job description to generate a personalized cover letter.
 - CORS configuration for secure cross-origin requests
 - Input validation and sanitization
 - Error handling with user-friendly messages
+- **API Key Protection**: Never commit API keys - use environment variables (see [SECURITY_NOTICE.md](SECURITY_NOTICE.md))
 
 ## Development Approach
 
