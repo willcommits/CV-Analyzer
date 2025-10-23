@@ -1,5 +1,3 @@
-using CvAnalyzer.Core.Models;
-
 namespace CvAnalyzer.Core.Interfaces;
 
 public interface ICoverLetterService
