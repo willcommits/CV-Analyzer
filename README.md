@@ -140,7 +140,7 @@ This application was built with a focus on:
 ### Backend
 
 #### Using Docker (Recommended for Render)
-The backend is fully containerized and ready for deployment. See [DOCKER_DEPLOYMENT.md](DOCKER_DEPLOYMENT.md) for detailed instructions.
+The backend is fully containerized and ready for deployment.
 
 **Important:** You **must** set the `OpenAI__ApiKey` environment variable (with double underscores) for the application to work. Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys).
 
@@ -150,8 +150,6 @@ cd backend
 docker build -t cv-analyzer-backend .
 docker run -p 5161:5161 -e OpenAI__ApiKey="your-key" cv-analyzer-backend
 ```
-
-For Render deployment, see [RENDER_QUICKSTART.md](RENDER_QUICKSTART.md) - the guide includes step-by-step instructions for setting up the required environment variable.
 
 Or using docker-compose:
 ```bash
