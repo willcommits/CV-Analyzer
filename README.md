@@ -1,6 +1,7 @@
 # CV-to-Cover Letter Generator
 
 A full-stack web application that generates personalized cover letters by analyzing a CV (PDF) and matching it with job descriptions using OpenAI's GPT technology.
+The CV-to-Cover Letter Generator can be accessed [here](https://ornate-beijinho-ecf718.netlify.app/).
 
 ## Features
 
@@ -139,7 +140,7 @@ This application was built with a focus on:
 
 ### Backend
 
-#### Using Docker (Recommended for Render)
+#### Using Docker (Deployed on Render)
 The backend is fully containerized and ready for deployment.
 
 **Important:** You **must** set the `OpenAI__ApiKey` environment variable (with double underscores) for the application to work. Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys).
@@ -156,12 +157,6 @@ Or using docker-compose:
 # Create .env file with your OpenAI API key
 docker-compose up -d
 ```
-
-#### Traditional Deployment
-- Deploy to Azure App Service, AWS, or similar cloud platform
-- Configure environment variables for OpenAI API key
-- Set up HTTPS certificates
-
 ### Frontend
 - Build for production: `npm run build`
 - Deploy to Netlify, Vercel, or similar static hosting
