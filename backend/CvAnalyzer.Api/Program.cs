@@ -30,7 +30,9 @@ builder.Services.AddCors(options =>
 });
 
 // Configure OpenAI client
-var openAiApiKey = builder.Configuration["OpenAI:ApiKey"] ?? throw new InvalidOperationException("OpenAI API key not configured");
+var openAiApiKey = builder.Configuration["OpenAI:ApiKey"] 
+    ?? Environment.GetEnvironmentVariable("OpenAI__ApiKey")
+    ?? throw new InvalidOperationException("OpenAI API key not configured. Please set OpenAI__ApiKey environment variable or OpenAI:ApiKey in appsettings.json");
 builder.Services.AddSingleton<OpenAIClient>(new OpenAIClient(openAiApiKey));
 
 // Register services
