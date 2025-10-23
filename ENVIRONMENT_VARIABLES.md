@@ -1,5 +1,7 @@
 # Environment Variables Configuration
 
+⚠️ **SECURITY WARNING**: Never commit API keys to the repository. See [SECURITY_NOTICE.md](SECURITY_NOTICE.md) for important security information about protecting your API keys.
+
 ## Quick Answer
 
 **YES**, you **MUST** set the OpenAI API key as an environment variable when deploying to Render (or any other platform).
@@ -58,6 +60,10 @@ docker-compose up
 
 ### Using dotnet run
 
+You have two options for local development:
+
+**Option 1: Environment Variable (Recommended)**
+
 Set the environment variable before running:
 
 **Linux/Mac:**
@@ -78,6 +84,17 @@ dotnet run
 ```cmd
 set OpenAI__ApiKey=your-actual-api-key
 cd backend\CvAnalyzer.Api
+dotnet run
+```
+
+**Option 2: Local Configuration File**
+
+Create a local `appsettings.Development.json` file (this file is in .gitignore and won't be committed):
+
+```bash
+cd backend/CvAnalyzer.Api
+cp appsettings.Development.json.example appsettings.Development.json
+# Edit appsettings.Development.json and add your API key
 dotnet run
 ```
 
