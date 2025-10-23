@@ -1,7 +1,7 @@
 import type { CvAnalysisRequest, CvAnalysisResponse } from '../types';
 
 const API_BASE_URL = import.meta.env.PROD 
-  ? 'https://your-backend-app-name.onrender.com/api' // Replace with your actual Render backend URL
+  ? 'https://cv-analyzer-6gsn.onrender.com/api'
   : 'http://localhost:5161/api';
 
 export class ApiService {
