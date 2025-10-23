@@ -119,6 +119,23 @@ If you don't set the `OpenAI__ApiKey` environment variable, the application will
 | `OpenAI__ApiKey` | **YES** | None | OpenAI API authentication |
 | `ASPNETCORE_ENVIRONMENT` | No | Production | Environment mode (Development/Production) |
 | `PORT` | No | 5161 | Port the application listens on |
+| `CORS_ALLOWED_ORIGINS` | No | See below | Additional CORS origins (comma-separated) |
+
+### CORS Configuration
+
+The application has built-in CORS support for:
+- `http://localhost:5173` (Vite dev server)
+- `http://localhost:5174` (Alternative Vite port)
+- `http://localhost:3000` (Create React App)
+- `https://ornate-beijinho-ecf718.netlify.app` (Production frontend)
+
+To add additional allowed origins, set the `CORS_ALLOWED_ORIGINS` environment variable with a comma-separated list:
+
+```bash
+CORS_ALLOWED_ORIGINS=https://my-app.netlify.app,https://another-app.vercel.app
+```
+
+**Note:** When deploying a new frontend on a different domain, add it to `CORS_ALLOWED_ORIGINS` to avoid CORS errors.
 
 ## Troubleshooting
 
